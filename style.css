@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html .parallax,
+body .parallax {
+  height: 140vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+html .parallax .object,
+body .parallax .object {
+  display: flex;
+  z-index: 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  width: 100vw;
+  color: white;
+}
+html .parallax .object .content,
+body .parallax .object .content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  transform: translateZ(-1px) scale(2);
+  font-size: 26px;
+  font-family: "ariel", sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 9%;
+  text-align: center;
+}
+html .parallax .object:nth-child(odd),
+body .parallax .object:nth-child(odd) {
+  background: linear-gradient(200deg, #00ff37 15%, #3c3cff 90%);
+  z-index: 0;
+}
+html .parallax .object:nth-child(even) .content,
+body .parallax .object:nth-child(even) .content {
+  color: black;
+  z-index: 1;
+}
+html ::-webkit-scrollbar,
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
